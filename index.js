@@ -69,6 +69,10 @@ function removeFromCart(item) {
       I--;
     }
   }
+  if (!itemInCart) {
+    console.log("That item is not your cart.");
+  }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
