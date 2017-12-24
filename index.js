@@ -20,36 +20,18 @@ function addToCart(item) {
 }
 
 function viewCart() {
-const l =  cart.length;
-
-if (!l) {
-  return console.log("Your shopping cart is empty.");
-}
-
-let itemsAndPrices = [];
-
-for (let i = 0; i < 1; i++) {
-  let itemAndPrice = cart[i];
-  let item = Object.keys(itemAndPrice) [0];
-  let price = itemAndPrice[item];
-
-  itemsAndPrices.push(`${item} at \$${price}`);
-}
-
-switch(itemAndPrices.length) {
-  case 1:
-    break;
-  case 2:
-    itemAndPrices = itemsAndPrices.join(" and ");
-    break;
-  default:
-    itemsAndPrices[l-1] = " and ".concat(itemsAndPrices)[l-1]);
-    itemsAndPrices = itemsAndPrices.join(", ");
+if (cart.length === 0) {
+  console.log("Your shopping cart is empty.")
+} else {
+  var items = [];
+  for (var i = 0; i < cart.length; i++) {
+    for (var item in cart[i]) {
+      items.push(item + " at $" + cart[1][item])
+    }
   }
-  console.log(`in your cart, you have ${itemsAndPrices}.`)
+  console.log("In your cart, you have " + items.join(", ") + ".");
+  }
 }
-
-
 
 function total() {
   // write your code here
