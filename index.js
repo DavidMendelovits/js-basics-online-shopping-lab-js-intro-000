@@ -60,7 +60,15 @@ for (let i = 0, I = cart.length; i < I; i++) {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  let itemInCart = false;
+
+  for (let i = 0, I = cart.length; i < I; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      itemInCart = true;
+      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+      I--;
+    }
+  }
 }
 
 function placeOrder(cardNumber) {
