@@ -25,7 +25,7 @@ function viewCart() {
   if (!I) {
     console.log("Your shopping cart is empty.");
   }
-  let itemsAndPrices - [];
+  let itemsAndPrices = [];
 
   for (let i = 0; i < I; i++) {
     let itemAndPrice = cart[i];
