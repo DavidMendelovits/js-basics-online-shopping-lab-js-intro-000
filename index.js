@@ -49,7 +49,14 @@ switch(itemsAndPrices.length) {
 }
 
 function total() {
-  // write your code here
+let t = 0;
+
+for (let i = 0, I = cart.length; i < I; i++) {
+  for (let item in cart[i]) {
+    t += cart[i][item];
+  }
+}
+  return t;
 }
 
 function removeFromCart(item) {
